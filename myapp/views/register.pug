@@ -1,0 +1,21 @@
+extends layout
+block content
+    .container
+        .form-register
+            form(method='POST' action='/register')
+                h1 Fill your informations
+                input.first(type='text' placeholder='Enter Username' name='username')
+                span.err-one Please fill username input
+                input.second(type='password' placeholder='Enter Password' name='password')
+                span.err-two Please fill password input
+                input.third(type='password' placeholder='Confirm password' name='passwordconf')
+                span.err-three Confirm your password
+                input.forth(type='email' placeholder='Enter email' name='email')
+                span.err-four Please fill email input
+                br
+                button.btn(type='submit')
+                    i.fa.fa-user-plus
+                    |  Create my account
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+        script(src='/javascripts/register.js')
+
