@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to USER
+  form(action="/users" method='POST')
+    input(type="text" name="user")
+    input(type="text" name="age")
+    button(type="submit") user
