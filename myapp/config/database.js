@@ -1,8 +1,14 @@
 
 const Sequelize = require('sequelize');
 
-module.exports = new Sequelize('nodeblog', 'nodeblog', 'nodeblog', {
-    host: '127.0.0.1',
+
+const db = new Sequelize('sql2303562', 'sql2303562', 'gE3*hF8!', {
+    host: 'sql2.freemysqlhosting.net',
     dialect: 'mysql'
 });
-    
+
+
+        
+        
+
+module.exports = db

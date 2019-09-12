@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to USER
+  div(class=container style="background:white")
+      for result in results
+        -let str=result.id+result.post_name+result.stock_quantity
+        div=(str)
+      

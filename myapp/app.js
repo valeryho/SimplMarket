@@ -7,14 +7,18 @@ const bodyParser=require('body-parser');
 
 const db = require('./config/database')
 db.authenticate()
-  .then(() => console.log('Data_base_connected...'))
+
+  .then(() => console.log('Data_base_connected...'),)
   .catch(err => console.log('Error: ' + err))
 
 
 
+
+
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var productRouter = require('./routes/product');
 var registerRouter = require('./routes/register');
+var testRouter = require('./routes/test');
 
 var app = express();
 
@@ -31,8 +35,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/product', productRouter);
 app.use('/register', registerRouter);
+app.use('/test', testRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

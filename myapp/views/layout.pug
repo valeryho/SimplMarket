@@ -5,4 +5,21 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    div.container-fluid.layout
+      div.navigation
+        div.time=time
+        div.nav_item Гроші
+          .sub_nav
+            .sub_nav_item  sub1
+
+        div.nav_item Продажі
+        div.nav_item Звкупки
+        div.nav_item Склад
+      div.main_block
+        div.head_main_block head
+        div
+          block content
+
+
+
+    
